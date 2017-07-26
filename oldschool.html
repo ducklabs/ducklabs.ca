@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>DuckLabs</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+* { margin: 0; padding: 0; }
+body { background-color: #eee; color: #555; }
+pre { font-family: 'Courier', monospace; width: 80ch; margin: 4em auto; padding: .5em; line-height: 0; counter-reset: line; }
+pre span { display: block; line-height: 1.15rem; }
+pre span:before { counter-increment: line; content: counter(line); display: inline-block; border-right: 1px solid #ddd; width: 3ch; padding: 0 .5em; margin-right: .5em; color: #888; text-align: right; }
+pre a { cursor: text; }
+</style>
+</head>
+<body>
+<pre>
+<span>$ man ducklabs</span>
+<span> ________                 __   .____          ___.           </span>
+<span> \______ \  __ __   ____ |  | _|    |   _____ \_ |__   ______</span>
+<span>  |    |  \|  |  \_/ ___\|  |/ /    |   \__  \ | __ \ /  ___/</span>
+<span>  |    `   \  |  /\  \___|    <|    |___ / __ \| \_\ \\___ \ </span>
+<span> /_______  /____/  \___  >__|_ \_______ (____  /___  /____  ></span>
+<span>         \/            \/     \/       \/    \/    \/     \/ </span>
+<span></span>
+<span>          Helping make products that connect people.         </span>
+<span></span>
+<span> Contact:  info@ducklabs.ca </span>
+<span>           (403) 606-0945   </span>
+<span></span>
+<span id="cursor">$ |</span></span>
+</pre>
+<script>
+var cursor = document.getElementById("cursor");
+var cursorVisible = true;
+var blinker = function() {
+  cursorVisible = !cursorVisible;
+  cursor.innerHTML = cursorVisible ? "$ |" : "$ ";
+}
+setInterval(blinker, 500);
+</script>
+</body>
+</html>
