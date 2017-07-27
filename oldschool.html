@@ -12,30 +12,75 @@ pre a { cursor: text; }
 </style>
 </head>
 <body>
-<pre>
-<span>$ man ducklabs</span>
-<span> ________                 __   .____          ___.           </span>
-<span> \______ \  __ __   ____ |  | _|    |   _____ \_ |__   ______</span>
-<span>  |    |  \|  |  \_/ ___\|  |/ /    |   \__  \ | __ \ /  ___/</span>
-<span>  |    `   \  |  /\  \___|    <|    |___ / __ \| \_\ \\___ \ </span>
-<span> /_______  /____/  \___  >__|_ \_______ (____  /___  /____  ></span>
-<span>         \/            \/     \/       \/    \/    \/     \/ </span>
-<span></span>
-<span>          Helping make products that connect people.         </span>
-<span></span>
-<span> Contact:  info@ducklabs.ca </span>
-<span>           (403) 606-0945   </span>
-<span></span>
-<span id="cursor">$ |</span></span>
+<pre id="terminal">
 </pre>
 <script>
-var cursor = document.getElementById("cursor");
-var cursorVisible = true;
-var blinker = function() {
-  cursorVisible = !cursorVisible;
-  cursor.innerHTML = cursorVisible ? "$ |" : "$ ";
+var prompt = "<span>$  </span>";
+var promptBlink = "<span>$ |</span>";
+var man = "<span>$ man |</span>";
+var manDucklabs = "<span>$ man ducklabs</span>";
+var emptyLine = "<span></span>";
+var emptyLineBlink = "<span>|</span>";
+var manPage = 
+"<span> ________                 __   .____          ___.           </span>" +
+"<span> \\______ \\  __ __   ____ |  | _|    |   _____ \\_ |__   ______</span>" +
+"<span>  |    |  \\|  |  \\_/ ___\\|  |/ /    |   \\__  \\ | __ \\ /  ___/</span>" +
+"<span>  |    `   \\  |  /\\  \\___|    &lt;|    |___ / __ \\| \\_\\ \\\\___ \\ </span>" +
+"<span> /_______  /____/  \\___  &gt;__|_ \\_______ (____  /___  /____  &gt;</span>" +
+"<span>         \\/            \\/     \\/       \\/    \\/    \\/     \\/ </span>" +
+"<span></span>" +
+"<span>          Helping make products that connect people.         </span>" +
+ "<span></span>" +
+"<span> Contact:  contact@ducklabs.ca </span>" +
+"<span>           (403) 714-4372   </span>" +
+"<span></span>";
+var clear = "<span>$ clear</span>";
+var clearBlink = "<span>$ clear|</span>";
+
+var frames = [];
+frames.push(prompt);
+frames.push(promptBlink);
+frames.push(prompt);
+frames.push(promptBlink);
+frames.push(prompt);
+frames.push(promptBlink);
+frames.push(man);
+frames.push(manDucklabs+emptyLine);
+frames.push(manDucklabs+emptyLineBlink);
+frames.push(manDucklabs+emptyLine);
+frames.push(manDucklabs+emptyLineBlink);
+frames.push(manDucklabs+manPage);
+frames.push(manDucklabs+manPage+prompt);
+frames.push(manDucklabs+manPage+promptBlink);
+frames.push(manDucklabs+manPage+prompt);
+frames.push(manDucklabs+manPage+promptBlink);
+frames.push(manDucklabs+manPage+prompt);
+frames.push(manDucklabs+manPage+promptBlink);
+frames.push(manDucklabs+manPage+prompt);
+frames.push(manDucklabs+manPage+promptBlink);
+frames.push(manDucklabs+manPage+prompt);
+frames.push(manDucklabs+manPage+promptBlink);
+frames.push(manDucklabs+manPage+prompt);
+frames.push(manDucklabs+manPage+promptBlink);
+frames.push(manDucklabs+manPage+prompt);
+frames.push(manDucklabs+manPage+promptBlink);
+frames.push(manDucklabs+manPage+prompt);
+frames.push(manDucklabs+manPage+promptBlink);
+frames.push(manDucklabs+manPage+prompt);
+frames.push(manDucklabs+manPage+promptBlink);
+frames.push(manDucklabs+manPage+clear);
+frames.push(manDucklabs+manPage+clearBlink);
+frames.push(manDucklabs+manPage+clear);
+frames.push(manDucklabs+manPage+clearBlink);
+
+var frameNumber = 1;
+var terminal = document.getElementById("terminal");
+var showFrame = function() {
+	terminal.innerHTML = frames[frameNumber];
+	frameNumber = (frameNumber+1) % frames.length;
+	setTimeout(showFrame, 500);
 }
-setInterval(blinker, 500);
+setTimeout(showFrame, 500);
 </script>
 </body>
 </html>
