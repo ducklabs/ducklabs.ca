@@ -3,10 +3,14 @@
 @import "fonts.less";
 
 body {
+  width: 100%;
+  height: 100%;
   font-family: @primary-font-familly;
 
-  .container {
-    width: 1440px;
+  @media (min-width: 1200px) {
+    .container {
+      width: 1440px;
+    }
   }
 }
 
