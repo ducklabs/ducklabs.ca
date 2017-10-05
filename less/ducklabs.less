@@ -1,0 +1,130 @@
+@import "variables.less";
+@import "mixins.less";
+@import "fonts.less";
+
+body {
+    font-family: @primary-font-familly;
+
+    .container {
+        width: 1440px;
+    }
+}
+
+header {
+    height: 750px;
+    background-color: #a4cacb;
+
+    .logo-container {
+        margin-top: 100px;
+    }
+
+    .tag-line {
+        margin-top: 100px;
+        font-size: 36px;
+        font-weight: 100;
+        color: #294a5a;
+        text-decoration: none solid rgb(41, 74, 90);
+    }
+}
+
+#strategy {
+    background-color: #fff;
+}
+
+#methodology {
+    background-color: #f89938;
+}
+
+#contact {
+    background-color: #c5d8d5;
+}
+
+footer {
+    background-color: #a4cacb;
+}
+
+#contact,
+#methodology,
+#strategy {
+    padding-bottom: 85px;
+
+    h2 {
+        font-size: 16px;
+        color: #294a5a;
+        text-decoration: none solid rgb(41, 74, 90);
+        line-height: 36px;
+        letter-spacing: 5px;
+        text-align: center;
+        margin-top: 85px;
+    }
+
+    h3 {
+        font-size: 50px;
+        color: #294a5a;
+        text-decoration: none solid rgb(41, 74, 90);
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    p {
+        font-size: 22px;
+        font-weight: 300;
+        color: #4c4c4c;
+        text-decoration: none solid rgb(76, 76, 76);
+        text-align: center;
+        padding-top: 25px;
+
+        &.question-text {
+            font-size: 24px;
+            font-weight: 400;
+            color: #f89938;
+            text-align: center;
+        }
+    }
+}
+
+#methodology {
+    h2,
+    h3,
+    li,
+    p {
+        color: #fff;
+    }
+
+    .tag-line {
+        font-size: 24px;
+        color: #4c4c4c;
+    }
+
+    ul {
+        width: 595px;
+        font-size: 22px;
+        font-weight: 100;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#contact {
+    img {
+        width: 31px;
+        height: 47px;
+    }
+
+    p.email-container {
+        margin-bottom: 0;
+    }
+
+    a[href^="mailto:"] {
+        font-size: 22px;
+        color: #057ca1;
+        text-decoration: none solid rgb(5, 124, 161);
+    }
+
+    p.address {
+        font-family: Oxygen;
+        text-decoration: none solid rgb(76, 76, 76);
+        font-size: 14px;
+        padding-top: 5px;
+    }
+}
