@@ -13,6 +13,7 @@ body .container {
 header {
   height: 750px;
   background-color: #a4cacb;
+  position: relative;
 }
 header .logo-container {
   margin-top: 100px;
@@ -23,6 +24,17 @@ header .tag-line {
   font-weight: 100;
   color: #294a5a;
   text-decoration: none solid #294a5a;
+}
+header .arrow {
+  width: 150px;
+  height: 30px;
+  fill: #a4cacb;
+  transform: rotate(180deg);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -30px;
 }
 #strategy {
   background-color: #fff;
@@ -96,9 +108,19 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+#methodology ul li {
+  text-align: left;
+}
+#contact {
+  padding-bottom: 45px;
+}
 #contact img {
+  margin-top: 55px;
   width: 31px;
   height: 47px;
+}
+#contact h2 {
+  margin-top: 25px;
 }
 #contact p.email-container {
   margin-bottom: 0;
@@ -108,9 +130,23 @@ footer {
   color: #057ca1;
   text-decoration: none solid #057ca1;
 }
+#contact p {
+  max-width: 400px;
+}
 #contact p.address {
   font-family: Oxygen;
   text-decoration: none solid #4c4c4c;
   font-size: 14px;
   padding-top: 5px;
+}
+footer img {
+  width: 238px;
+  height: 88px;
+  margin-top: 45px;
+}
+footer .copyright {
+  font-size: 10px;
+  color: #000000;
+  text-decoration: none solid #000000;
+  margin: 25px 0 45px;
 }
