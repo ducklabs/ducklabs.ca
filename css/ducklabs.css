@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Grayscale v3.3.7+1 (http://startbootstrap.com/template-overviews/grayscale)
- * Copyright 2013-2017 Start Bootstrap
+ * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
@@ -8,6 +8,9 @@ body {
   width: 100%;
   height: 100%;
   font-family: 'Oxygen';
+}
+.container {
+  width: 100vw;
 }
 header {
   background-color: #a4cacb;
@@ -69,7 +72,7 @@ h3 {
   padding-top: 25px;
 }
 p {
-  font-size: 15px;
+  font-size: calc(24.05882353px);
   font-weight: 300;
   color: #4c4c4c;
   text-decoration: none solid #4c4c4c;
@@ -90,7 +93,10 @@ p.question-text {
 }
 #methodology .tag-line {
   font-size: 24px;
-  color: #4c4c4c;
+  color: #f89938;
+  background: white;
+  display: inline;
+  padding: 0.2em 0;
 }
 #methodology ul {
   max-width: 595px;
@@ -103,6 +109,12 @@ p.question-text {
 }
 #contact {
   padding-bottom: 45px;
+  /*  p.address {
+        font-family: Oxygen;
+        text-decoration: none solid rgb(76, 76, 76);
+        font-size: 14px;
+        padding-top: 5px;
+      } */
 }
 #contact img {
   margin-top: 55px;
@@ -115,6 +127,10 @@ p.question-text {
 #contact p.email-container {
   margin-bottom: 0;
 }
+#contact p.email-container a:hover {
+  border: 1px solid white;
+  padding: 3px 8px;
+}
 #contact a[href^="mailto:"] {
   font-size: 22px;
   color: #057ca1;
@@ -126,10 +142,13 @@ p.question-text {
   margin-left: auto;
 }
 #contact p.address {
+  padding-top: 0;
+}
+#contact a.address-link {
+  color: #057ca1;
   font-family: Oxygen;
-  text-decoration: none solid #4c4c4c;
   font-size: 14px;
-  padding-top: 5px;
+  text-decoration: none solid #4c4c4c;
 }
 footer img {
   width: 238px;
@@ -158,11 +177,9 @@ footer .copyright {
     padding-bottom: 120px;
   }
   li {
-    font-size: 22px;
+    font-size: calc(24.05882353px);
   }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1440px;
+  #contact a.address-link {
+    color: #4c4c4c;
   }
 }
