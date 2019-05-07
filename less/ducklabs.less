@@ -8,6 +8,10 @@ body {
     font-family: @primary-font-familly;
 }
 
+.container {
+  width: 100vw;
+}
+
 header {
     background-color: #a4cacb;
     position: relative;
@@ -43,7 +47,7 @@ header {
 }
 
 #methodology {
-    background-color: #f89938;
+    background-color: @secondary-color;
 }
 
 #contact {
@@ -79,7 +83,7 @@ h3 {
 }
 
 p {
-    font-size: 15px;
+    font-size: @primary-font-size;
     font-weight: 300;
     color: #4c4c4c;
     text-decoration: none solid rgb(76, 76, 76);
@@ -89,7 +93,7 @@ p {
     &.question-text {
         font-size: 24px;
         font-weight: 400;
-        color: #f89938;
+        color: @secondary-color;
         text-align: center;
     }
 }
@@ -104,7 +108,10 @@ p {
 
     .tag-line {
         font-size: 24px;
-        color: #4c4c4c;
+        color: @secondary-color;
+        background: white;
+        display: inline;
+        padding: 0.2em 0;
     }
 
     ul {
@@ -136,6 +143,12 @@ p {
         margin-bottom: 0;
     }
 
+    p.email-container a:hover {
+      border: 1px solid white;
+      padding: 3px 8px;
+    }
+
+
     a[href^="mailto:"] {
         font-size: 22px;
         color: #057ca1;
@@ -148,11 +161,21 @@ p {
         margin-left: auto;
     }
 
-    p.address {
+   /*  p.address {
         font-family: Oxygen;
         text-decoration: none solid rgb(76, 76, 76);
         font-size: 14px;
         padding-top: 5px;
+      } */
+      p.address {
+        padding-top: 0;
+      }
+
+      a.address-link {
+        color: #057ca1;
+        font-family: Oxygen;
+        font-size: 14px;
+        text-decoration: none solid rgb(76, 76, 76);
     }
 }
 
@@ -190,12 +213,9 @@ footer {
     }
 
     li {
-        font-size: 22px;
+        font-size: @primary-font-size;
     }
-}
-@media (min-width: 992px) {}
-@media (min-width: 1200px) {
-    .container {
-        width: 1440px;
+    #contact a.address-link {
+      color: #4c4c4c;
     }
 }
